@@ -1016,6 +1016,11 @@ body {
 .cid-rqgUlUKQGG .navbar.collapsed.opened .dropdown-menu {
   top: 0;
 }
+@media (min-width: 992px) {
+  .cid-rqgUlUKQGG .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+    max-height: calc(100vh - 3.8rem - 1rem);
+  }
+}
 .cid-rqgUlUKQGG .navbar.collapsed .dropdown-menu {
   background: transparent !important;
 }
