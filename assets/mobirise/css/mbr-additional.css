@@ -1354,28 +1354,82 @@ body {
 .cid-rqhI3HtNrH .mbr-section-btn {
   color: #ffffff;
 }
-.cid-rrleKmAyJT {
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background-image: url("../../../assets/images/prayer.jpg");
+.cid-rxzd7WdxTC {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #d0bd1f;
 }
-.cid-rrleKmAyJT .mbr-section-subtitle {
-  color: #ffffff;
+.cid-rxzd7WdxTC .accordion-content {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
 }
-.cid-rrleKmAyJT .btn {
-  margin: 0 0 .5rem 0;
+.cid-rxzd7WdxTC .panel-group {
+  width: 100%;
 }
-@media (max-width: 768px) {
-  .cid-rrleKmAyJT h2,
-  .cid-rrleKmAyJT h3 {
-    text-align: center !important;
-  }
-  .cid-rrleKmAyJT .mbr-section-btn {
-    text-align: center !important;
-  }
+.cid-rxzd7WdxTC .panel-text,
+.cid-rxzd7WdxTC .header-text,
+.cid-rxzd7WdxTC .mbr-section-subtitle {
+  color: #8d97ad;
 }
-.cid-rrleKmAyJT H2 {
-  color: #ffffff;
+.cid-rxzd7WdxTC .card {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  margin-bottom: .5rem;
+  border: none;
+  border-top-left-radius: .25rem !important;
+  border-top-right-radius: .25rem !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.cid-rxzd7WdxTC .card .card-header {
+  border-radius: 0 !important;
+  border-bottom: none !important;
+  padding: 0;
+}
+.cid-rxzd7WdxTC .card .card-header a.panel-title {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  transition: all .3s;
+  background-color: #ffffff;
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  text-decoration: none !important;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  line-height: normal;
+}
+.cid-rxzd7WdxTC .card .card-header a.panel-title:focus {
+  text-decoration: none !important;
+}
+.cid-rxzd7WdxTC .card .card-header a.panel-title .sign {
+  padding-right: 1rem;
+}
+.cid-rxzd7WdxTC .card .card-header a.panel-title h4 {
+  padding: 1rem 1rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+.cid-rxzd7WdxTC .card .card-header a.panel-title[aria-expanded="true"] {
+  background-color: #188ef4;
+}
+.cid-rxzd7WdxTC .card .card-header a.panel-title[aria-expanded="true"] .header-text {
+  color: #ffffff !important;
+}
+.cid-rxzd7WdxTC .card .panel-body {
+  background: #ffffff;
+}
+.cid-rxzd7WdxTC .sign {
+  color: #232323;
+}
+.cid-rxzd7WdxTC .header-text {
+  color: #444444;
+}
+.cid-rxzd7WdxTC .mbr-section-subtitle {
+  color: #08579f;
 }
 .cid-rsJarD55uR {
   padding-top: 90px;
