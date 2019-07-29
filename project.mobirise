@@ -55,7 +55,7 @@
     "uniqCompNum": 5,
     "versionPublish": "4.10.6",
     "screenshot": "screenshot.png",
-    "favicon": "",
+    "favicon": "@PROJECT_PATH@/assets/images/pastedgraphic-1.png",
     "noImageResize": "true",
     "google-analytics": "",
     "siteUrl": "undefined",
