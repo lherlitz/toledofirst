@@ -996,7 +996,6 @@ body {
   min-height: 77px;
   transition: all .3s;
   background: #c2272d;
-  background: none;
 }
 .cid-rqgUlUKQGG .navbar.opened {
   transition: all .3s;
@@ -2221,7 +2220,6 @@ body {
   min-height: 77px;
   transition: all .3s;
   background: #c2272d;
-  background: none;
 }
 .cid-rz9d0hrovX .navbar.opened {
   transition: all .3s;
@@ -2494,7 +2492,7 @@ body {
   color: #8d97ad;
 }
 .cid-rz9dpNNws7 {
-  padding-top: 90px;
+  padding-top: 75px;
   padding-bottom: 0px;
   background-color: #ffffff;
 }
