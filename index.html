@@ -22,7 +22,182 @@
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
-  <script src="https://js.churchcenter.com/modal/v1"></script>
+  <script>
+!function() {
+    function e() {
+        function e() {
+            u(), m.clickHandler.start()
+        }
+        function i() {
+            m.clickHandler.stop()
+        }
+        function r(e) {
+            var n = e.replace(".churchcenteronline.com", ".churchcenter.com");
+            m.adapter = c(n), m.adapter.open(n)
+        }
+        function a() {
+            m.adapter && m.adapter.close(), m.adapter = null
+        }
+        function c(e) {
+            var n = navigator.userAgent.match(/Tablet|iPad|Mobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Opera Mini|\bCrMo\/|Opera Mobi/i),
+                t = "https:" === window.location.protocol || "localhost" === window.location.host.slice(0, 9) || window.location.host.match(/\.test$/),
+                o = function(e) {
+                    try {
+                        return d(e), !0
+                    } catch (n) {
+                        return console.warn(n), !1
+                    }
+                }(e),
+                i = navigator.userAgent.match(/Safari/) && !navigator.userAgent.match(/Chrome/);
+            return o && t && !n && !i ? p : (n ? console.warn("ChurchCenterModal: for a better user experience we are directing this user to a new tab on a phone.") : o ? i ? console.warn("ChurchCenterModal: Safari's default privacy settings don't allow cookies to be set in iframes. Falling back to a new tab.") : console.warn("ChurchCenterModal: must be called from an HTTPS page. Falling back to a new tab.") : console.warn("ChurchCenterModal: URL not supported by modals. Falling back to a new tab."), h)
+        }
+        function l(e) {
+            if (e.match(/\.churchcenteronline\.com$/))
+                return !0;
+            if (e.match(/\.churchcenter\.com$/))
+                return !0;
+            if (e.match(/\.church\.center$/))
+                return !0;
+            if (e.match(/\.churchcenter\.test$/))
+                return !0;
+            throw "ChurchCenterModal: hostname '" + e + "' is not supported. Use 'https://[yoursubdomain].churchcenteronline.com'"
+        }
+        function s(e) {
+            var n = e.slice(1).split("/"),
+                t = n[0];
+            if ("giving" === t || "people" === t && "forms" === n[1])
+                return !0;
+            throw "ChurchCenterModal: the app '" + t + "' is not supported yet."
+        }
+        function d(e) {
+            var n = new URL(e);
+            return l(n.hostname) && s(n.pathname)
+        }
+        function u() {
+            var e = "https://js.churchcenter.com/modal/v1";
+            document.querySelector("script[src^='" + e + "']") || console.warn("It looks like ChurchCenterModal is not being loaded from " + e + ". Planning Center only supports loading ChurchCenterModal from " + e + ".")
+        }
+        var h = new t,
+            p = new n,
+            m = {
+                adapter: null,
+                clickHandler: null
+            };
+        m.clickHandler = new o(r), this.open = r, this.close = a, this.start = e, this.stop = i
+    }
+    function n() {
+        function e(e) {
+            var n = new URL(e).origin;
+            o(), window.addEventListener("message", u, !1), document.addEventListener("keyup", s), h.elements.iframe.src = e, r({
+                origin: n,
+                opening: "yes"
+            })
+        }
+        function n() {
+            document.removeEventListener("keyup", s), window.removeEventListener("message", u), h.elements.iframe.src = "about:blank", r({
+                origin: null,
+                opening: "no"
+            })
+        }
+        function t() {
+            if (h.elements.iframe)
+                throw "ChurchCenterModal: `createDOMElements` should only be called once!";
+            h.elements.iframe = document.createElement("iframe"), h.elements.iframe.style.cssText = "z-index: 2147483647; display: none; opacity: 0; background-color: rgba(0, 0, 0, 0.00392157); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background-position: initial initial; background-repeat: initial initial;", h.elements.iframe.id = p, h.elements.background = document.createElement("div"), h.elements.background.style.cssText = "z-index: 2147483646; display: none; opacity: 0; background-color: rgba(0, 0, 0, 0.6); border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background-position: initial initial; background-repeat: initial initial;", h.elements.loadingImage = document.createElement("img"), h.elements.loadingImage.style.cssText = "position: absolute; left: -50px; margin: 140px 50% 0; width: 100px;", h.elements.background.appendChild(h.elements.loadingImage), document.addEventListener("DOMContentLoaded", o)
+        }
+        function o() {
+            document.querySelector(p) || (document.body.appendChild(h.elements.background), document.body.appendChild(h.elements.iframe))
+        }
+        function i(e, n) {
+            var t = {};
+            for (var o in e)
+                t[o] = e[o];
+            for (var i in n)
+                t[i] = n[i];
+            return t
+        }
+        function r(e) {
+            h = i(h, e), a()
+        }
+        function a() {
+            var e = h.opening,
+                n = h.elements.iframe,
+                t = h.elements.background,
+                o = h.origin;
+            h.elements.loadingImage.src = o + "/static/embed-loading.svg", "no" === e ? (c(n), c(t)) : "yes" === e ? (c(n), l(t)) : "complete" === e && (l(n), l(t))
+        }
+        function c(e) {
+            e.style.display = "none", e.style.opacity = 0
+        }
+        function l(e) {
+            e.style.display = "block", e.style.opacity = 1
+        }
+        function s(e) {
+            27 === e.keyCode && n()
+        }
+        function d(e) {
+            h.elements.iframe.contentWindow.postMessage({
+                type: e
+            }, "*")
+        }
+        function u(e) {
+            e.origin === h.origin && ("ready" === e.data.type && d("verified"), "show" === e.data.type && r({
+                opening: "complete"
+            }), "close" === e.data.type && n())
+        }
+        var h = {
+                elements: {
+                    iframe: null,
+                    background: null,
+                    loadingImage: null
+                },
+                origin: null,
+                opening: "no"
+            },
+            p = "ChurchCenterModalIframeExistsInDOM";
+        t(), this.open = e, this.close = n
+    }
+    function t() {
+        function e(e) {
+            t.window = window.open(e, "_blank")
+        }
+        function n() {
+            t.window && t.window.close()
+        }
+        var t = {
+            window: null
+        };
+        this.open = e, this.close = n
+    }
+    function o(e) {
+        function n() {
+            window.addEventListener("click", o)
+        }
+        function t() {
+            window.removeEventListener("click", o)
+        }
+        function o(n) {
+            var t = i(n.target, "a[href][data-open-in-church-center-modal='true'], a[href*='open-in-church-center-modal=true']");
+            t && (n.preventDefault(), e(t.href))
+        }
+        function i(e, n) {
+            for (; !r(e, n) && (e = e.parentElement);)
+                ;
+            return e
+        }
+        function r(e, n) {
+            for (var t = (e.document || e.ownerDocument).querySelectorAll(n), o = t.length; --o >= 0 && t.item(o) !== e;)
+                ;
+            return o > -1
+        }
+        var a = {
+            open: null
+        };
+        a.open = e, this.start = n, this.stop = t
+    }
+    window.ChurchCenterModal = new e, window.ChurchCenterModal.start()
+}();
+
+</script>
 </head>
 <body>
   <section class="menu cid-rqgUlUKQGG" once="menu" id="menu2-0">
