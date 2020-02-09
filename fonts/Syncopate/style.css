@@ -1,0 +1,14 @@
+@font-face {
+   font-family: 'Syncopate';
+   font-style: normal;
+   font-display: swap;
+   font-weight: 700;
+   src: url('file:///Users/lucasherlitz/Documents/GitHub/toledofirst//fonts/Syncopate/700.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Syncopate';
+   font-style: regular;
+   font-display: swap;
+   font-weight: 400;
+   src: url('file:///Users/lucasherlitz/Documents/GitHub/toledofirst//fonts/Syncopate/regular.ttf') format('truetype');
+}
