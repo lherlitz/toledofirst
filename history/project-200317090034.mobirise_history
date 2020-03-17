@@ -2762,10 +2762,10 @@
     },
     "covid-19.html": {
       "settings": {
-        "title": "Coronavirus Statement",
+        "title": "covid-19",
         "order": 4,
         "header_custom": "<script src=\"https://js.churchcenter.com/modal/v1\"></script>",
-        "meta_descr": "Please find attached our position and plans for the Coronavirus Quarantine.  The Quarantine does not apply to religious organizations, weddings & funerals at this time."
+        "meta_descr": ""
       },
       "components": [
         {
