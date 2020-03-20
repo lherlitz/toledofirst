@@ -57,7 +57,7 @@
         "url": "https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
       }
     ],
-    "uniqCompNum": 15,
+    "uniqCompNum": 13,
     "versionPublish": "4.11.6",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/pastedgraphic-1.png",
@@ -588,16 +588,49 @@
           "_params": {}
         },
         {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#8d97ad"
+            },
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(@bgColor, @color2)"
+            },
+            ".video-block": {
+              "margin": "auto",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".video-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "video2",
+          "_customHTML": "<section group=\"Images & Videos\" class=\"video1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showSectionTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#f4f8fa\" condition=\"fullWidth == false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth == false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#51aafa\" condition=\"gradientBg && fullWidth == false\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"container\" mbr-if=\"showSubtitle||showSectionTitle\">\n        <h2 class=\"mbr-fonts-style mb-3 mbr-section-title align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showSectionTitle\" data-app-selector=\".mbr-section-title\">Video Title</h2>\n        <h3 class=\"mbr-section-subtitle mbr-text mbr-fonts-style mb-4 mbr-light align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex itaque laboriosam quam,<br> consequuntur vero officiis molestias, inventore repellendus.\n        </h3>\n    </div>\n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container-fluid':fullWidth == false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://vimeo.com/399132426?loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
+          "_cid": "rTMk1BLxyp",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "video2-9"
+        },
+        {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://vimeo.com/event/27704/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>",
+          "_customHTML": "<iframe src=\"https://vimeo.com/live-chat/399132426/\" width=\"100%\" height=\"600\" frameborder=\"0\"></iframe>",
           "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
           "alias": "code-editor",
           "_tags": [
             "Extension"
           ],
           "_name": "pro.custom-html",
-          "_anchor": "custom-html-e",
+          "_anchor": "custom-html-c",
           "_PHPplaceholders": [],
           "_JSplaceholders": []
         },
@@ -3168,46 +3201,13 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
-            "background": "@bgColor",
-            ".mbr-section-subtitle": {
-              "color": "#8d97ad"
-            },
-            "& when (@gradientBg)": {
-              "background": "linear-gradient(@bgColor, @color2)"
-            },
-            ".video-block": {
-              "margin": "auto",
-              "& when (@fullWidth)": {
-                "width": "100% !important"
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".video-block": {
-                "width": "100% !important"
-              }
-            }
-          },
-          "_name": "video2",
-          "_customHTML": "<section group=\"Images & Videos\" class=\"video1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"8\" step=\"1\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\">\n    <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showSectionTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#f4f8fa\" condition=\"fullWidth == false\">\n    <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"fullWidth == false\">\n    <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#51aafa\" condition=\"gradientBg && fullWidth == false\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"container\" mbr-if=\"showSubtitle||showSectionTitle\">\n        <h2 class=\"mbr-fonts-style mb-3 mbr-section-title align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showSectionTitle\" data-app-selector=\".mbr-section-title\">Video Title</h2>\n        <h3 class=\"mbr-section-subtitle mbr-text mbr-fonts-style mb-4 mbr-light align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex itaque laboriosam quam,<br> consequuntur vero officiis molestias, inventore repellendus.\n        </h3>\n    </div>\n    <figure class=\"mbr-figure align-center\" mbr-class=\"{'container-fluid':fullWidth == false}\">\n        <div class=\"video-block\" mbr-style=\"{'width':videoSize+'%'}\">\n            <div mbr-video>\n                <iframe src=\"https://vimeo.com/399132426?loop=0&autoplay=0\"></iframe>\n            </div>\n        </div>\n    </figure>\n</section>",
-          "_cid": "rTO5BHaJUt",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "video2-d"
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
             "background-color": "@bgColor",
             ".mbr-text": {
               "color": "#8d97ad"
             }
           },
           "_name": "content1",
-          "_customHTML": "<section class=\"mbr-section content1\" group=\"Content\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-lg-8 col-md-10\">\n                <p class=\"mbr-text mbr-fonts-style mbr-light\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\"><b>Dear Toledo First Church &amp; Childcare Families:<br></b><br>Over the past few days, the situation with the COVID-19 virus has developed significantly. Governor Mike DeWine and the state public health officials have issued several guidelines and orders. We want you to be aware that our staff and leaders are taking every precaution to keep our church and childcare families healthy. We are also discussing the ways in which we can make a meaningful ministry impact to the people and organizations that will be deeply affected by the containment measures.<br><br>At this point, <b>we plan to continue our normal Sunday Morning and Pre-School &amp; Childcare Services</b>, but we recognize that the situation may evolve in the coming days.<br><br>With that said, we will be cancelling ALL evening programs and building rentals for the next three weeks. That means no Awana, no Bible Study, no You Belong Here Class, No Friday Night Prayer, and no Youth Service. The reason for this decision is for our cleaning staff and childcare teachers to clean the building &amp; toys each night, thoroughly. If you’re able to volunteer and help our staff, that would be greatly appreciated. Please email Jessica Brant at Childcare@ToledoFirst.org or call her at 419-475-3208, Opt. 1, to let us know you’re able to help. We are looking for all evening programs to be back up and running on April 5, 2020.<br><br>We appreciate your flexibility in this season as we adapt along the way. Below are several items that we are doing to adjust in our Sunday Morning Service to mitigate the spread of germs.<br><br><b>GREETING</b><br>To keep germs of any kind at bay, let’s put a pause on handshakes and hugs and stick with huge smiles, warm words and maybe some air hugs or a thumbs up!<br><br><b>OFFERING</b><br>We will not be passing the offering at our weekend service. Instead, there will be giving stations and/or ushers available as you exit. We recommend that you give your tithe and offering online (this would be a great time to set up a recurring donation). You can do so <a href=\"https://toledofirst.churchcenter.com/giving?open-in-church-center-modal=true\">here</a> or through the <a href=\"http://onelink.to/yzrbtg\" target=\"_blank\">Church Center App</a>. One of the greatest challenges we will face if restrictions become stricter is related to steady income. If you need to miss, we totally understand. We want to thank you in advance as you redirect your regular giving to our online platforms.<br><br><b>DOORS</b><br>As much as possible, First Impressions team will hold doors open to greet you. Door handles will be disinfected before, during, and after each service.<br><br><b>ONLINE CHURCH OPTIONS<br></b>If you find yourself feeling sick, we encourage you to join us live on Facebook. As soon as possible we will have the message uploaded and encourage you to listen to a missed message from previous weeks <a href=\"sermons.html\">here</a>. Upcoming events and opportunities, including any cancellations due to the coronavirus, will be available through social media and email.<br><br>We encourage you to take some time to understand proper prevention measures to avoid spreading the virus by reading through the CDC recommendations below. These measures will ensure that we curb the spread of ANY sickness, including the flu and other viruses.<br><br>• Avoid close contact with people who are sick.<br>• Avoid touching your eyes, nose, and mouth.<br>• Stay home when you are sick.<br>• Cover your cough or sneeze with a tissue, then throw the tissue in the trash.<br>• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe.<br>• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing.<br><br><b>REMEMBER...</b><br>“For God has not given us a spirit of fear, but of power and love and of a sound mind.”<br><i>2 Timothy 1:7</i><br><br>We can all continue to use the gift of sound thinking as we take necessary precautions AND pray faith-filled (not fear-filled) prayers for healing, the containment of this virus, and divine wisdom for those working toward solutions. Let’s pray for God-ideas and solutions to be imparted into the public health communities as we continue do our own part to act wisely in navigating this situation.<br><br><b>Darren P. Gambrell</b><br><i>Lead Pastor</i></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content1\" group=\"Content\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-lg-8 col-md-10\">\n                <p class=\"mbr-text mbr-fonts-style mbr-light\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\"><b>Dear Toledo First Church &amp; Childcare Families:<br></b><br>Over the past few days, the situation with the COVID-19 virus has developed significantly. Governor Mike DeWine and the state public health officials have issued several guidelines and orders. We want you to be aware that our staff and leaders are taking every precaution to keep our church and childcare families healthy. We are also discussing the ways in which we can make a meaningful ministry impact to the people and organizations that will be deeply affected by the containment measures.<br><br>At this point, <b>we plan to continue our normal Sunday Morning and Pre-School &amp; Childcare Services</b>, but we recognize that the situation may evolve in the coming days.<br><br>With that said, we will be cancelling ALL evening programs and building rentals for the next three weeks. That means no Awana, no Bible Study, no You Belong Here Class, No Friday Night Prayer, and no Youth Service. The reason for this decision is for our cleaning staff and childcare teachers to clean the building &amp; toys each night, thoroughly. If you’re able to volunteer and help our staff, that would be greatly appreciated. Please email Jessica Brant at Childcare@ToledoFirst.org or call her at 419-475-3208, Opt. 1, to let us know you’re able to help. We are looking for all evening programs to be back up and running on April 5, 2020.<br><br>We appreciate your flexibility in this season as we adapt along the way. Below are several items that we are doing to adjust in our Sunday Morning Service to mitigate the spread of germs.<br><br><b>GREETING</b><br>To keep germs of any kind at bay, let’s put a pause on handshakes and hugs and stick with huge smiles, warm words and maybe some air hugs or a thumbs up!<br><br><b>OFFERING</b><br>We will not be passing the offering at our weekend service. Instead, there will be giving stations and/or ushers available as you exit. We recommend that you give your tithe and offering online (this would be a great time to set up a recurring donation). You can do so <a href=\"https://toledofirst.churchcenter.com/giving?open-in-church-center-modal=true\">here</a> or through the <a href=\"http://onelink.to/yzrbtg\" target=\"_blank\">Church Center App</a>. One of the greatest challenges we will face if restrictions become stricter is related to steady income. If you need to miss, we totally understand. We want to thank you in advance as you redirect your regular giving to our online platforms.<br><br><b>DOORS</b><br>As much as possible, First Impressions team will hold doors open to greet you. Door handles will be disinfected before, during, and after each service.<br><br><b>ONLINE CHURCH OPTIONS<br></b>If you find yourself feeling sick, we encourage you to join us live on Facebook. As soon as possible we will have the message uploaded and encourage you to listen to a missed message from previous weeks <a href=\"sermons.html\">here</a>. Upcoming events and opportunities, including any cancellations due to the coronavirus, will be available through social media and email.<br><br>We encourage you to take some time to understand proper prevention measures to avoid spreading the virus by reading through the CDC recommendations below. These measures will ensure that we curb the spread of ANY sickness, including the flu and other viruses.<br><br>• Avoid close contact with people who are sick.<br>• Avoid touching your eyes, nose, and mouth.<br>• Stay home when you are sick.<br>• Cover your cough or sneeze with a tissue, then throw the tissue in the trash.<br>• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe.<br>• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing.<br><br><b>REMEMBER...</b><br>“For God has not given us a spirit of fear, but of power and love and of a sound mind.”<br><i>2 Timothy 1:7</i><br><br>We can all continue to use the gift of sound thinking as we take necessary precautions AND pray faith-filled (not fear-filled) prayers for healing, the containment of this virus, and divine wisdom for those working toward solutions. Let’s pray for God-ideas and solutions to be imparted into the public health communities as we continue do our own part to act wisely in navigating this situation.<br><br><b>Darren P. Gambrell</b><br><i>Lead Pastor</i></p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rTuQjYyFE5",
           "_anchor": "content1-8",
           "_protectedParams": [],
