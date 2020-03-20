@@ -1149,6 +1149,34 @@ section.lazy-placeholder:after {
 .cid-rqhI3HtNrH .mbr-section-btn {
   color: #ffffff;
 }
+.cid-rTMk1BLxyp {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #f4f8fa;
+}
+.cid-rTMk1BLxyp .mbr-section-subtitle {
+  color: #8d97ad;
+}
+.cid-rTMk1BLxyp .video-block {
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .cid-rTMk1BLxyp .video-block {
+    width: 100% !important;
+  }
+}
+#custom-html-c {
+  /* Type valid CSS here */
+}
+#custom-html-c div {
+  padding: 80px 0;
+  color: #777;
+  text-align: center;
+}
+#custom-html-c p {
+  font-size: 60px;
+  color: #777;
+}
 .cid-rxzd7WdxTC {
   padding-top: 60px;
   padding-bottom: 60px;
