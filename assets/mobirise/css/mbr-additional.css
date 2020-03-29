@@ -1149,17 +1149,16 @@ section.lazy-placeholder:after {
 .cid-rqhI3HtNrH .mbr-section-btn {
   color: #ffffff;
 }
-#custom-html-e {
-  /* Type valid CSS here */
+.cid-rUEaiz3ojb {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #ffffff;
 }
-#custom-html-e div {
-  padding: 80px 0;
-  color: #777;
-  text-align: center;
+.cid-rUEaiz3ojb .mbr-overlay {
+  background: #232323;
 }
-#custom-html-e p {
-  font-size: 60px;
-  color: #777;
+.cid-rUEaiz3ojb .mbr-section-subtitle {
+  color: #cccccc;
 }
 .cid-rxzd7WdxTC {
   padding-top: 60px;
@@ -2622,31 +2621,6 @@ section.lazy-placeholder:after {
     width: 175%;
     max-width: calc(100% + 2rem);
     left: -1rem;
-  }
-}
-.cid-rAbAucyD4k {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: #ffffff;
-}
-.cid-rzIaiSmeJW {
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background-color: #ffffff;
-}
-.cid-rzIaiSmeJW .mbr-section-subtitle {
-  color: #767676;
-}
-.cid-rzIaiSmeJW .btn {
-  margin: 0 0 .5rem 0;
-}
-@media (max-width: 768px) {
-  .cid-rzIaiSmeJW h2,
-  .cid-rzIaiSmeJW h3 {
-    text-align: center !important;
-  }
-  .cid-rzIaiSmeJW .mbr-section-btn {
-    text-align: center !important;
   }
 }
 .cid-rqgUlUKQGG .dropdown-item:before {
